@@ -1,0 +1,103 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text {
+    border-radius: 5px;
+    opacity: 0.4;
+    width: 450px;
+    height: 50px;
+    margin: 10px;
+    font-size: 17px;
+}
+p {
+    font-size: 20px;
+}
+.message {
+    height: 180px;
+    width: 450px;
+}
+.help {
+    position: relative;
+    /* left: -90px; */
+}
+.main-right {
+    border-radius: 10px;
+    height: 800px;
+    width: 650px;
+    background-color: rgb(250, 237, 220);
+}
+.button {
+    margin: 20px;
+    font-size: 20px;
+    background-color: rgb(79, 192, 130);
+    width: 300px;
+    height: 60px;
+    border-radius: 35px;
+}
+.button:hover {
+    width: 360px;
+    height: 75px;
+}
+.main-left {
+    border-radius: 10px;
+    background-color: rgb(79, 192, 130);
+    color: white;
+    font-size: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    width: 650px;
+}
+.button-2 {
+    margin-top: 50px;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.main {
+    background: url(./background.jpg);
+    width: 1920px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(250, 237, 220);
+    border: 1px solid black;
+    font-size: 25px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon:hover {
+    font-size: 30px;
+    width: 65px;
+    height: 65px;
+}
+h2 {
+    margin: 30px;
+    font-size: 35px;
+}
+form{
+    position: relative;
+    left: 95px;
+}

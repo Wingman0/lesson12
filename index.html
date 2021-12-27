@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_V9cw06MjrP2ZlUKVJYffW');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_zhacvyd', 'template_d26y5x6', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="main-right">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="parent">
+                    <div class="icon"><i class="fa fa-facebook"></i></div>
+                    <div class="icon"><i class="fa fa-tumblr"></i></div>
+                    <div class="icon"><i class="fa fa-linkedin"></i></div>
+                </div>
+                <p>...or use our contact form below</p>
+                <form action="/login" method="post" id="contact-form">
+                <input type="hidden" name="contact_number">
+                <input type="text" class="text" placeholder="Phone">
+                <input type="text" class="text" placeholder="Email" name="reply_to">
+                <p>Type your message here:</p>
+                <input type="text" class="message">
+                <p class="help">Need additional help?</p>
+                <button type="submit" class="button">Contact Me</button>
+            </div>
+        </div>
+               </form>
+        <div class="main-left">
+            <h1>Hello, User!</h1>
+            <p>If you want to know info about our project than</p>
+            <input type="button" class="button-2" value="&#8592;">
+        </div>
+    </div>
+</body>
+</html>
